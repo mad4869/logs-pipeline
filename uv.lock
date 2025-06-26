@@ -1,0 +1,23 @@
+version = 1
+revision = 2
+requires-python = ">=3.13"
+
+[[package]]
+name = "kafka-python"
+version = "2.2.13"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/75/34/065d1535221bfa242f2f313d83e7f64c88d7fbcd57b0f99a04f03ee8d27f/kafka_python-2.2.13.tar.gz", hash = "sha256:4b689256bf440403226a00069e7af086c7206315f3d811de160c00bce2c9b708", size = 347677, upload-time = "2025-06-20T22:57:34.598Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/96/31/12f4b7c84977904e109b87f8808f75bbc1776e4a5e0a0f5fda9b68eb7fe9/kafka_python-2.2.13-py2.py3-none-any.whl", hash = "sha256:b4e13ad8fed3f62350afdbe92a887e65d2ec26fe06bd9b5f4bbe7972ab2aa696", size = 309674, upload-time = "2025-06-20T22:57:32.19Z" },
+]
+
+[[package]]
+name = "logs-pipeline"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "kafka-python" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "kafka-python", specifier = ">=2.2.13" }]
